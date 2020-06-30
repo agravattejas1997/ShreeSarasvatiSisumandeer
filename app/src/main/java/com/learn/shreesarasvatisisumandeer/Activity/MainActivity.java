@@ -1,4 +1,4 @@
-package com.learn.shreesarasvatisisumandeer;
+package com.learn.shreesarasvatisisumandeer.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+
+import com.learn.shreesarasvatisisumandeer.R;
 
 public class MainActivity extends AppCompatActivity {
 

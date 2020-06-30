@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.learn.shreesarasvatisisumandeer.HomeFragment"
+        android:name="com.learn.shreesarasvatisisumandeer.Fragment.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
 
@@ -31,13 +31,13 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.learn.shreesarasvatisisumandeer.SignInFragment"
+        android:name="com.learn.shreesarasvatisisumandeer.Fragment.SignInFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_sign_in" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.learn.shreesarasvatisisumandeer.CreateProfileFragment"
+        android:name="com.learn.shreesarasvatisisumandeer.Fragment.CreateProfileFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_create_profile" />
 </navigation>

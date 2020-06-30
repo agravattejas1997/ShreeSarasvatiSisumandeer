@@ -1,4 +1,4 @@
-package com.learn.shreesarasvatisisumandeer;
+package com.learn.shreesarasvatisisumandeer.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,13 +16,9 @@ import com.learn.shreesarasvatisisumandeer.R;
 
 public class HomeFragment extends Fragment {
 
-    TextView textView;
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        textView = root.findViewById(R.id.text_home);
-
-        textView.setText("Home To Fragment");
         return root;
     }
 }
