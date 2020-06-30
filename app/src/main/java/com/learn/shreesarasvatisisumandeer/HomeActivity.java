@@ -106,7 +106,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (fragment==null) {
             fm = getSupportFragmentManager();
             fragmentTransaction = fm.beginTransaction();
-            fragmentTransaction.add(R.id.nav_host_fragment, fragment).addToBackStack(HOME_FRAGMENT);
+            fragmentTransaction.add(R.id.nav_host_fragment, fragment).addToBackStack(HOME_FRAGMENT).addToBackStack(HOME_F);
 
         }
         else
