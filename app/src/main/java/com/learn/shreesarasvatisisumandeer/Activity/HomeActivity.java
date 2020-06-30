@@ -1,7 +1,6 @@
-package com.learn.shreesarasvatisisumandeer;
+package com.learn.shreesarasvatisisumandeer.Activity;
 
 
-import android.support.v4.app.*;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +9,11 @@ import android.view.Menu;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.learn.shreesarasvatisisumandeer.Fragment.AddStudentFragment;
+import com.learn.shreesarasvatisisumandeer.Fragment.HomeFragment;
+import com.learn.shreesarasvatisisumandeer.Fragment.SignInFragment;
+import com.learn.shreesarasvatisisumandeer.Fragment.TakeFeesFragment;
+import com.learn.shreesarasvatisisumandeer.R;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -106,7 +110,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (fragment==null) {
             fm = getSupportFragmentManager();
             fragmentTransaction = fm.beginTransaction();
-            fragmentTransaction.add(R.id.nav_host_fragment, fragment).addToBackStack(HOME_FRAGMENT).addToBackStack(HOME_F);
+            fragmentTransaction.add(R.id.nav_host_fragment, fragment).addToBackStack(HOME_FRAGMENT);
 
         }
         else
