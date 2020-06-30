@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_create_profile_gradient"
+    tools:context=".CreateProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/linear_profile_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img"
+                android:layout_width="130sp"
+                android:layout_height="130sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:src="@mipmap/ic_logo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_profile_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:boxStrokeColor="@color/colorAccent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:drawablePadding="10dp"
+                    android:hint="Full Name"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawablePadding="10dp"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/user"
+                android:padding="15dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:boxStrokeColor="@color/colorAccent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shapephone"
+                    android:drawablePadding="10dp"
+                    android:hint="Ex: GJ03XX0000"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:boxStrokeColor="@color/colorAccent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shapephone"
+                    android:drawablePadding="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:hint="Car Name Ex: Maruti Omni"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:boxStrokeColor="@color/colorAccent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shapephone"
+                    android:drawablePadding="10dp"
+                    android:hint="Rought Ex : Aasharam Road"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:inputType="textCapWords"
+                    android:padding="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Press Me" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

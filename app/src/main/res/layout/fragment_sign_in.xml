@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@drawable/backgtound_png"
+    android:layout_height="match_parent"
+    tools:context=".SignInFragment">
+
+
+    <ImageView
+
+        android:id="@+id/sign_in_img_varification"
+        android:layout_width="100sp"
+        android:layout_gravity="center"
+        android:layout_height="100sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20sp"
+        android:src="@mipmap/ic_phone_varification"/>
+
+    <EditText
+        android:id="@+id/sign_in_ed_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:layout_below="@id/sign_in_img_varification"
+        android:background="@drawable/shapephone"
+        android:drawablePadding="10dp"
+        android:hint="Phone Number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"/>
+
+
+    <Button
+        android:id="@+id/sign_in_btn_get_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Otp"
+        android:shadowColor="@android:color/transparent"
+        android:padding="15dp"
+        android:layout_below="@id/sign_in_ed_phone_number"
+        android:textColor="@android:color/black"
+        android:layout_margin="20sp"
+        android:background="@drawable/shapesignin"/>
+
+</RelativeLayout>
