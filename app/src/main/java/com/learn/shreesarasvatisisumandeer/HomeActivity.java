@@ -24,6 +24,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String HOME_FRAGMENT = "HomeFragment";
     private AppBarConfiguration mAppBarConfiguration;
 
 
@@ -105,14 +106,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (fragment==null) {
             fm = getSupportFragmentManager();
             fragmentTransaction = fm.beginTransaction();
-            fragmentTransaction.add(R.id.nav_host_fragment, fragment);
+            fragmentTransaction.add(R.id.nav_host_fragment, fragment).addToBackStack(HOME_FRAGMENT);
 
         }
         else
         {
             fm = getSupportFragmentManager();
             fragmentTransaction = fm.beginTransaction();
-            fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
+            fragmentTransaction.replace(R.id.nav_host_fragment, fragment).addToBackStack(HOME_FRAGMENT);
 
         }
         fragmentTransaction.commit();
