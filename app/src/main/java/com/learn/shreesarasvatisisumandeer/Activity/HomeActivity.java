@@ -29,6 +29,9 @@ import androidx.appcompat.widget.Toolbar;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    SharedPreferences mSharedPreferencesSignIn;
+    SharedPreferences.Editor mEditorSignIn;
+
     public static HomeActivity HOME_ACTIVITY;
     private static final String HOME_FRAGMENT = "HomeFragment";
     private AppBarConfiguration mAppBarConfiguration;
@@ -40,6 +43,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mSharedPreferencesSignIn = getSharedPreferences("SIGN_IN", MODE_PRIVATE);
+
+       // mEditorSignIn = mSharedPreferencesSignIn.edit();
 
 
         HOME_ACTIVITY=this;
@@ -65,13 +72,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         NavigationUI.setupWithNavController(navigationView, navController);
         navigationView.setNavigationItemSelectedListener(this);
 
+        Menu menu = (Menu) navigationView.getMenu().getItem(1);
+
+        menu.
         loadFragment(new HomeFragment());
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        //getMenuInflater().inflate(R.menu.home, menu);
+
         return true;
     }
 
