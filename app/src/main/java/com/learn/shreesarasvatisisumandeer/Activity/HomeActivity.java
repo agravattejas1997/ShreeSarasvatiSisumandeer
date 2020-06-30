@@ -1,6 +1,7 @@
 package com.learn.shreesarasvatisisumandeer.Activity;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +29,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static HomeActivity HOME_ACTIVITY;
     private static final String HOME_FRAGMENT = "HomeFragment";
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -39,6 +41,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        HOME_ACTIVITY=this;
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
