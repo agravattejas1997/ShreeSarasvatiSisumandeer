@@ -8,12 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 import com.learn.shreesarasvatisisumandeer.Activity.HomeActivity;
 import com.learn.shreesarasvatisisumandeer.R;
 
@@ -25,6 +30,13 @@ public class SignInFragment extends Fragment {
 
     SharedPreferences mSharedPreferencesSignIn;
     SharedPreferences.Editor mEditorSignIn;
+
+    PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
+    private FirebaseAuth mAuth;
+    private String varification;
+    String otp;
+
+
     Context context;
     View root;
     EditText mEditTextPhoneNo;
@@ -38,7 +50,12 @@ public class SignInFragment extends Fragment {
 
         mEditorSignIn = mSharedPreferencesSignIn.edit();
 
+        mAuth = FirebaseAuth.getInstance();
+
+        initFireBaseCallbacks();
+
     }
+
 
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -61,9 +78,9 @@ public class SignInFragment extends Fragment {
                     if (mEditTextPhoneNo.getText().toString().length()==10)
                     {
 
-                        mEditorSignIn.putString("sign_in_phone_no","+91 "+mEditTextPhoneNo.getText().toString());
-                        mEditorSignIn.putBoolean("sign_in",true);
-                        mEditorSignIn.commit();
+//                        mEditorSignIn.putString("sign_in_phone_no","+91 "+mEditTextPhoneNo.getText().toString());
+//                        mEditorSignIn.putBoolean("sign_in",true);
+//                        mEditorSignIn.commit();
 
                         changeFragment();
                     }
@@ -84,4 +101,30 @@ public class SignInFragment extends Fragment {
         fragmentTransaction.commit();
 
     }
+
+    private void initFireBaseCallbacks() {
+
+        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            @Override
+            public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+                Toast.makeText(HOME_ACTIVITY, "Verification Complete ", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onVerificationFailed(FirebaseException e) {
+
+                Toast.makeText(HOME_ACTIVITY, "Verification Failed", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                Toast.makeText(HOME_ACTIVITY, "Verification Sms Sent", Toast.LENGTH_SHORT).show();
+                varification =s;
+            }
+        };
+
+    }
+
 }

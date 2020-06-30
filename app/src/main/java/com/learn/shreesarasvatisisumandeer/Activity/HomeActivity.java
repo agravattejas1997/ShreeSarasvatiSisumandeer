@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -32,6 +33,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     SharedPreferences mSharedPreferencesSignIn;
     SharedPreferences.Editor mEditorSignIn;
 
+    boolean checkSignIn=false;
     public static HomeActivity HOME_ACTIVITY;
     private static final String HOME_FRAGMENT = "HomeFragment";
     private AppBarConfiguration mAppBarConfiguration;
@@ -46,7 +48,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         mSharedPreferencesSignIn = getSharedPreferences("SIGN_IN", MODE_PRIVATE);
 
-       // mEditorSignIn = mSharedPreferencesSignIn.edit();
+
+//
+//        checkSignIn = mSharedPreferencesSignIn.getBoolean("sign_in",false);
+//        if (checkSignIn)
+//
+//            Toast.makeText(getApplicationContext(),"Yes...",Toast.LENGTH_LONG).show();
+//
+//        else
+//            Toast.makeText(getApplicationContext(),"No..",Toast.LENGTH_LONG).show();
+//
+//
+
+
+        // mEditorSignIn = mSharedPreferencesSignIn.edit();
 
 
         HOME_ACTIVITY=this;
@@ -72,9 +87,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         NavigationUI.setupWithNavController(navigationView, navController);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Menu menu = (Menu) navigationView.getMenu().getItem(1);
 
-        menu.
         loadFragment(new HomeFragment());
     }
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "874551406836",
+    "firebase_url": "https://shree-sarasvati-sishumandeer.firebaseio.com",
+    "project_id": "shree-sarasvati-sishumandeer",
+    "storage_bucket": "shree-sarasvati-sishumandeer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874551406836:android:dd02d09152431e7bcf6ea1",
+        "android_client_info": {
+          "package_name": "com.learn.shreesarasvatisisumandeer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874551406836-gqj8f6ldo45m5ipjd2l83pp88ip7d37s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.learn.shreesarasvatisisumandeer",
+            "certificate_hash": "3b2e3e6eceeb9c32e7cdbcdee0383fd2e01a36c4"
+          }
+        },
+        {
+          "client_id": "874551406836-7k3t5n52da6ce25p94ii1kp47gnvotfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABK7mwDYDeBEHXea9SQ6AqZHsZQ81_Uek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874551406836-7k3t5n52da6ce25p94ii1kp47gnvotfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
